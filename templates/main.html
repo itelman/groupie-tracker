@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/assets/main.css">
+    <title>Groupie-Tracker</title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><h1>Groupie-Tracker</h1></a>
+    </header>
+    
+    <div class="correct">
+        <div class="Artists">
+            {{range  $artist := .}}
+            <div class="card">
+                <a href="/artists?id={{$artist.ID}}">
+                    <br>
+                    <h2 class="card-title" align="center">{{$artist.Name}}</h2>
+                    <br>
+                    <img src="{{$artist.Image}}" alt="{{$artist.Name}}">
+                </a>
+            </div>
+            {{end}}
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
