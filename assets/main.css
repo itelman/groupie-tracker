@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     transition: all 0.3s;
+    justify-content: center;
 }
 
 h1 {
@@ -99,5 +100,15 @@ a:hover img {
 
     .Artists .card {
         margin: 40px;
+    }
+}
+
+@media (min-height: 768px) {
+    .Artists .img {
+        height: auto;
+    }
+    .Artists .card {
+        height: 300px; 
+        width: 300px;
     }
 }

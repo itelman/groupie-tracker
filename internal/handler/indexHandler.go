@@ -1,12 +1,10 @@
 package handler
 
 import (
-	"functions/internal/api"
+	"functions/internal/models"
 	"net/http"
 	"text/template"
 )
-
-var artistsMap, mapErr = api.GetArtistsMap()
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
@@ -25,7 +23,8 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if mapErr != nil {
+	artistsMap, err := models.GetArtistsMap()
+	if err != nil {
 		ErrorPageHandler(w, http.StatusInternalServerError)
 		return
 	}

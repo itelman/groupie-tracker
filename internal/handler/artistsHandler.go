@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"functions/internal/api"
+	"functions/internal/models"
 	"net/http"
 	"strconv"
 	"text/template"
@@ -25,7 +25,8 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if mapErr != nil {
+	artistsMap, err := models.GetArtistsMap()
+	if err != nil {
 		ErrorPageHandler(w, http.StatusInternalServerError)
 		return
 	}
@@ -35,7 +36,8 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	artistFullInfo, err := api.GetArtistFullInfo(artistsMap[id])
+	artistInfo := artistsMap[id]
+	err = artistInfo.GetFullInfo()
 	if err != nil {
 		ErrorPageHandler(w, http.StatusInternalServerError)
 		return
@@ -47,7 +49,7 @@ func ArtistHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = mainTmpl.Execute(w, artistFullInfo)
+	err = mainTmpl.Execute(w, artistInfo)
 	if err != nil {
 		ErrorPageHandler(w, http.StatusInternalServerError)
 		return

@@ -1,4 +1,4 @@
-* {
+body {
     background-color: rgb(0, 0, 0);
     padding: 0;
     margin: 0;
@@ -6,7 +6,6 @@
     justify-content: center;
     text-align: center;
     transition: all 0.3s;
-
 }
 
 header {
@@ -14,6 +13,10 @@ header {
     text-align: left;
     margin-top: 30px;
     margin-left: 30px;
+}
+
+.gm-style-iw.gm-style-iw-c {
+    color: black;
 }
 
 header .home {
@@ -27,9 +30,10 @@ header .home:hover {
 .band-card {
     margin: 20px;
     padding: 80px;
+    justify-content: center;
 }
 
-img {
+.image_band {
     width: 250px;
     border-radius: 1000px;
 
@@ -48,7 +52,7 @@ img {
 }
 
 .band-card .correct {
-    display: flex;
+    display: inline-flex;
 }
 
 .band-card .imgWithInf .info {
@@ -74,6 +78,14 @@ img {
     font-size: 25px;
 }
 
+.firstAlbum {
+    margin: 10px;
+}
+
+.creation_date {
+    margin: 10px;
+}
+
 td {
     padding: 15px;
     vertical-align: top;
@@ -81,7 +93,7 @@ td {
 
 .left {
     text-align: left;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .right {
