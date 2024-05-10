@@ -37,6 +37,14 @@ Groupie Trackers consists of receiving a given API and manipulate the data conta
 
 - For this feature, [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/) was used.
 
+### Dockerfile
+
+- For this project the following were created:
+
+    - one Dockerfile
+    - one image
+    - one container
+
 This project focuses on:
 
 - Manipulation and storage of data.
