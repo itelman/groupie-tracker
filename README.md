@@ -1,18 +1,18 @@
 ## groupie-tracker
 
-### FOR AUDITORS: IMPORTANT!!!
+## FOR AUDITORS: IMPORTANT!!!
 
 WHEN SUBMITTING A REQUEST TO "/artists", IF A VALUE OF ID IS "+25", "-25" OR "00025", THE WEBSITE WILL RETURN ERROR 404.
 
-### Authors:
+## Authors:
 
-Arshat Aitkozha (@araitkozha), Ilyas Telman (@itelman).
+Ilyas Telman (@itelman), Arshat Aitkozha (@araitkozha).
 
-### Objectives
+## Objectives
 
-Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
+Groupie Trackers consists of receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
 
-- It will be given an [API](https://groupietrackers.herokuapp.com/api), that consists in four parts:
+- It will be given an [API](https://groupietrackers.herokuapp.com/api), that consists of four parts:
 
   - The first one, `artists`, containing information about some bands and artists like their name(s), image, in which year they began their activity, the date of their first album and the members.
 
@@ -29,16 +29,22 @@ Groupie Trackers consists on receiving a given API and manipulate the data conta
   - The event/action we worked with is known as a client call to the server (client-server). It is a feature that needs to trigger an action. This action communicates with the server in order to recieve information, ([request-response])(https://en.wikipedia.org/wiki/Request%E2%80%93response)
   - An event consists in a system that responds to some kind of action triggered by the client, time, or any other factor.
 
-### Additional Information
+### Geolocalization
 
-- The backend is written in **Go**.
+- Groupie Tracker Geolocalization consists of mapping the different concerts locations of a certain artist/band given by the Client.
+
+- It applies a process of converting addresses (ex: Germany Mainz) into geographic coordinates (ex: 49,59380 8,15052), which then uses to place markers for the concerts locations of a certain artist/band on a map.
+
+- For this feature, [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/) was used.
 
 This project focuses on:
 
 - Manipulation and storage of data.
 - [JSON](https://www.json.org/json-en.html) files and format.
 - HTML.
-- Event creation and display.
+- Manipulation of Maps API
+- Geolocation, geocoding, etc
+- [Event](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) creation and display.
 - [Client-server](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview).
 
 ## Usage: how to run

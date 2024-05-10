@@ -6,6 +6,8 @@ import (
 	"strconv"
 )
 
+const MAP_API_KEY = "AIzaSyDhPphTq-AjtymkeraRqlz6RFz9NNWdZi4"
+
 type Artist struct {
 	ID               int      `json:"id"`
 	Image            string   `json:"image"`
@@ -21,7 +23,7 @@ type Artist struct {
 	Dates     Dates
 	Relations Relations
 
-	APIKey string
+	MapAPIKey string
 }
 
 type Locations struct {
@@ -105,7 +107,7 @@ func (artist *Artist) GetFullInfo() error {
 	}
 	artist.Relations = relations
 
-	artist.APIKey = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDhPphTq-AjtymkeraRqlz6RFz9NNWdZi4&callback=myMap"
+	artist.MapAPIKey = MAP_API_KEY
 
 	return nil
 }
