@@ -58,9 +58,7 @@ This project focuses on:
 ## Usage: how to run
 
 - You can view the app at:
-```console
 https://groupietracker-eup6zzii.b4a.run/
-```
 
 Or
 
