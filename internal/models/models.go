@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"functions/internal/api"
 	"strconv"
+	"os"
 )
 
 const MAP_API_KEY = os.Getenv("GOOGLE_API_KEY")
