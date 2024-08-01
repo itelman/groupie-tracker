@@ -1,3 +1,5 @@
+const apiKey = process.env.GOOGLE_API_KEY;
+
 function myMap() {
     var mapProp = {
         center: new google.maps.LatLng(51.508742, -0.120850),
@@ -10,7 +12,7 @@ function myMap() {
 
     for (var i = 0; i < locations.length; i++) {
         try {
-            fetch('https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDhPphTq-AjtymkeraRqlz6RFz9NNWdZi4&address=' + locations[i].textContent)
+            fetch('https://maps.googleapis.com/maps/api/geocode/json?key='+apiKey+'&address=' + locations[i].textContent)
                 .then(response => response.json())
                 .then(data => {
                     var marker = new google.maps.Marker({
