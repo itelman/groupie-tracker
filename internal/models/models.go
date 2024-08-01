@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const MAP_API_KEY = os.Getenv("GOOGLE_API_KEY")
+var MAP_API_KEY = os.Getenv("GOOGLE_API_KEY")
 
 type Artist struct {
 	ID               int      `json:"id"`
